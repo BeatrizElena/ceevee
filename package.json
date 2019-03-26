@@ -1,0 +1,19 @@
+{
+  "name": "@randallmorey/ceevee",
+  "version": "0.0.0-development",
+  "description": "A simple resume-building application.",
+  "author": "Randall Morey <randall@randallmorey.com>",
+  "homepage": "https://github.com/randallmorey/ceevee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randallmorey/ceevee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/randallmorey/ceevee/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
