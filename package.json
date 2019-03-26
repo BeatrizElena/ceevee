@@ -12,8 +12,14 @@
   "bugs": {
     "url": "https://github.com/randallmorey/ceevee/issues"
   },
+  "engines": {
+    "node": ">=11.12.0",
+    "npm": ">=6.7.0"
+  },
   "main": "index.js",
   "scripts": {
+    "container:install": "docker-compose run npm install",
+    "container:test": "docker-compose run test",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
