@@ -18,8 +18,22 @@ to an NPM command executes it within Docker.
 
 ## Installation
 
+To install all modules listed in `package.json`:
+
 ```
 npm run container:install
+```
+
+To install and add packages to `dependencies`:
+
+```
+npm run container:install package-name
+```
+
+To install and add packages to `devDependencies`:
+
+```
+npm run container:install-dev package-name
 ```
 
 ## Testing

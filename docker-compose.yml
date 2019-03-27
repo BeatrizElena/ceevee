@@ -2,12 +2,16 @@ version: '3'
 
 services:
 
-  npm: &npm
+  node: &node
     image: 'node:11'
-    entrypoint: npm
+    entrypoint: node
     volumes:
       - ./:/src
     working_dir: /src
+
+  npm: &npm
+    <<: *node
+    entrypoint: npm
 
   test:
     <<: *npm
