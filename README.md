@@ -65,6 +65,15 @@ to succeed.  Run tests locally:
 npm run container:test
 ```
 
+## Running
+
+The script automatically restarts whenever changes are detected or a
+crash occurs.
+
+```
+npm run container:start
+```
+
 ## Contributing
 
 Contributions consistent with the style and quality of existing code are
