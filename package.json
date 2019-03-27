@@ -17,15 +17,21 @@
     "npm": ">=6.7.0"
   },
   "main": "index.mjs",
+
   "scripts": {
     "container:install": "docker-compose run npm install",
     "container:install-dev": "npm run container:install -- --save-dev",
+    "container:lint:es": "docker-compose run npm run lint:es",
     "container:test": "docker-compose run test",
     "container:start": "docker-compose run npm start",
+
+    "lint:es": "eslint index.mjs app/**/*.mjs ",
     "start": "nodemon --experimental-modules index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "devDependencies": {
+    "eslint": "^5.15.3",
     "nodemon": "^1.18.10"
   }
 }

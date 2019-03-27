@@ -1,3 +1,3 @@
-import fs from 'fs';
+import server from './app/server';
 
-console.log('it worked!');
+server();
