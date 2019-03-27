@@ -29,7 +29,7 @@
     "lint:licenses": "node-license-validator --allow-licenses Apache Apache-2.0 \"Apache License\" BSD BSD-2-Clause BSD-3-Clause BSD-like CC-BY-3.0 CC-BY-4.0 CC0-1.0 ISC MIT MIT/X11 \"Public Domain\" Unlicense",
     "lint:licenses:report": "npm run lint:licenses -- -v",
     "start": "nodemon --experimental-modules index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint:es && npm run lint:licenses"
   },
   "devDependencies": {
     "eslint": "^5.15.3",

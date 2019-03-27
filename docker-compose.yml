@@ -7,6 +7,7 @@ services:
     entrypoint: node
     volumes:
       - ./:/src
+      - node_modules:/src/node_modules
     working_dir: /src
 
   npm: &npm
@@ -16,3 +17,6 @@ services:
   test:
     <<: *npm
     command: test
+
+volumes:
+  node_modules:
