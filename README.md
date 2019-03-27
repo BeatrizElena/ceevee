@@ -36,6 +36,26 @@ To install and add packages to `devDependencies`:
 npm run container:install-dev package-name
 ```
 
+## Linting
+
+Lint ES source with:
+
+```
+npm run container:lint:es
+```
+
+Check that all dependencies have acceptable licenses:
+
+```
+npm run container:lint:licenses
+```
+
+Report on on licenses in use:
+
+```
+npm run container:lint:licenses:report
+```
+
 ## Testing
 
 All tests must pass and test coverage must be at least 100% for the test script
