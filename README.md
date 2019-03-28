@@ -50,7 +50,7 @@ Check that all dependencies have acceptable licenses:
 npm run container:lint:licenses
 ```
 
-Report on on licenses in use:
+Report on all licenses in use:
 
 ```
 npm run container:lint:licenses:report
@@ -100,8 +100,8 @@ uses [commitizen][commitizen] and
 ensure that commit messages remain well-formatted and consistent across
 different contributors.
 
-Before committing for the first time, install `commitizen`
-and `cz-conventional-changelog`:
+Before committing for the first time, globally install `commitizen`
+and `cz-conventional-changelog` on your host machine:
 
 ```
 npm install -g commitizen cz-conventional-changelog
@@ -156,6 +156,9 @@ the issue; though not every commit or PR related to an issue needs to
 reference it.  Commits and PRs that fix or resolve an issue should
 [close the issue in the message][issue-closing].
 
+
+[docker]: https://www.docker.com
+[node]: https://nodejs.org
 
 [nvie-git-branching]: http://nvie.com/posts/a-successful-git-branching-model/
 [commitizen]: https://www.npmjs.com/package/commitizen
