@@ -16,7 +16,7 @@
     "node": ">=11.12.0",
     "npm": ">=6.7.0"
   },
-  "main": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "commit": "npm run container:test && git-cz",
     "container:install": "docker-compose run npm install",
@@ -25,16 +25,27 @@
     "container:lint:licenses": "docker-compose run npm run lint:licenses",
     "container:lint:licenses:report": "docker-compose run npm run lint:licenses:report",
     "container:start": "docker-compose run npm start",
+    "container:start:babel": "docker-compose run npm run start:babel",
     "container:test": "docker-compose run test",
-    "lint:es": "eslint *.mjs **/*.mjs",
+    "lint:es": "eslint *.mjs app/**/*.mjs test/**/*.mjs",
     "lint:licenses": "node-license-validator --allow-licenses Apache Apache-2.0 \"Apache License\" BSD BSD-2-Clause BSD-3-Clause BSD-like CC-BY-3.0 CC-BY-4.0 CC0-1.0 ISC MIT MIT/X11 \"Public Domain\" Unlicense",
     "lint:licenses:report": "npm run lint:licenses -- -v",
     "start": "nodemon --experimental-modules index.mjs",
-    "test": "npm run lint:es && npm run lint:licenses"
+    "start:babel": "nodemon --exec babel-node index.mjs",
+    "pretest": "npm run lint:es && npm run lint:licenses",
+    "test": "NODE_ENV=test nyc mocha --require @babel/register test/unit/**/*.mjs"
   },
   "devDependencies": {
     "eslint": "^5.15.3",
-    "node-license-validator": "^1.3.0"
+    "node-license-validator": "^1.3.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
   },
   "dependencies": {
     "nodemon": "^1.18.10"

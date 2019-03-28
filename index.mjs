@@ -1,3 +1,3 @@
 import server from './app/server';
 
-server();
+console.log(server());
