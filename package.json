@@ -18,6 +18,7 @@
   },
   "main": "index.mjs",
   "scripts": {
+    "commit": "npm run container:test && git-cz",
     "container:install": "docker-compose run npm install",
     "container:install-dev": "npm run container:install -- --save-dev",
     "container:lint:es": "docker-compose run npm run lint:es",

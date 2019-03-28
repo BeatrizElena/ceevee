@@ -89,10 +89,18 @@ uses [commitizen][commitizen] and
 ensure that commit messages remain well-formatted and consistent across
 different contributors.
 
-Before committing for the first time, install commitizen:
+Before committing for the first time, install `commitizen`
+and `cz-conventional-changelog`:
 
 ```
-npm install -g commitizen
+npm install -g commitizen cz-conventional-changelog
+```
+
+Create a .czrc file in your home directory, with path referring to the
+preferred, globally installed, commitizen adapter:
+
+```
+echo '{ "path": "/path/to/cz-conventional-changelog" }' > ~/.czrc
 ```
 
 [Watch a helpful video about commitizen][commitizen-video], but follow the
