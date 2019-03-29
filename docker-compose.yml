@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  node: &node
+    image: 'node:11'
+    entrypoint: node
+    volumes:
+      - ./:/src
+      - node_modules:/src/node_modules
+    working_dir: /src
+
+  npm: &npm
+    <<: *node
+    entrypoint: npm
+
+  test:
+    <<: *npm
+    command: test
+
+volumes:
+  node_modules:
