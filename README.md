@@ -38,6 +38,12 @@ npm run container:install-dev package-name
 
 ## Linting
 
+Lint against Codeclimate:
+
+```
+npm run container:lint:codeclimate
+```
+
 Lint ES source with:
 
 ```

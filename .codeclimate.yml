@@ -1,0 +1,31 @@
+---
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          patterns:
+            - '**/*.js'
+            - '**/*.mjs'
+  eslint:
+    enabled: true
+    config:
+      config: .eslintrc.js
+      extensions:
+        - .es6
+        - .js
+        - .mjs
+  fixme:
+    enabled: true
+  git-legal:
+    enabled: true
+ratings:
+  paths:
+    - '*.js'
+    - '*.mjs'
+exclude_paths:
+  - coverage/
+  - dist/
+  - node_modules/
+  - test*
