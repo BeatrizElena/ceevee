@@ -1,5 +1,13 @@
 ---
 plugins:
+  structure:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          patterns:
+            - '**/*.js'
+            - '**/*.mjs'
   duplication:
     enabled: true
     config:
@@ -24,6 +32,8 @@ ratings:
   paths:
     - '*.js'
     - '*.mjs'
+    - '**/*.js'
+    - '**/*.mjs'
 exclude_paths:
   - coverage/
   - dist/
