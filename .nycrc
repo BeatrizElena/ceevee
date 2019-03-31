@@ -8,9 +8,5 @@
     "lcov",
     "text",
     "text-summary"
-  ],
-  "extension": [".mjs"],
-  "exclude": [
-    "test/**/*.mjs"
   ]
 }
