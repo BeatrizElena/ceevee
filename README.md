@@ -42,6 +42,12 @@ npm run container:install-dev package-name
 
 ## Linting
 
+Lint all:
+
+```
+npm run container:lint
+```
+
 Lint against Codeclimate:
 
 ```
@@ -73,6 +79,12 @@ to succeed.  Run tests locally:
 
 ```
 npm run container:test
+```
+
+With coverage reporting:
+
+```
+npm run container:test:coverage
 ```
 
 ## Running
