@@ -14,10 +14,6 @@ services:
     <<: *node
     entrypoint: npm
 
-  test:
-    <<: *npm
-    command: test
-
   codeclimate:
     image: codeclimate/codeclimate
     command: analyze
@@ -28,6 +24,10 @@ services:
     environment:
       - CODECLIMATE_CODE=$PWD
       #- CODECLIMATE_DEBUG=1
+
+  test:
+    <<: *npm
+    command: test
 
 volumes:
   node_modules:

@@ -42,6 +42,12 @@ npm run container:install-dev package-name
 
 ## Linting
 
+Lint all:
+
+```
+npm run container:lint
+```
+
 Lint against Codeclimate:
 
 ```
@@ -75,8 +81,11 @@ to succeed.  Run tests locally:
 npm run container:test
 ```
 
-Please note that _tests always run under Babel transpilation_.  Read on for
-more information.
+With coverage reporting:
+
+```
+npm run container:test:coverage
+```
 
 ## Running
 
@@ -86,13 +95,6 @@ experimental modules feature:
 
 ```
 npm run container:start
-```
-
-In development, it is sometimes helpful to verify that the application runs
-under Babel transpilation (since tests _always run with transpilation_):
-
-```
-npm run container:start:babel
 ```
 
 ## Contributing
