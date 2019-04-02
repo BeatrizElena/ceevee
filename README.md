@@ -1,8 +1,8 @@
 # Ceevee
 
 [![CircleCI](https://circleci.com/gh/randallmorey/ceevee.svg?style=svg)](https://circleci.com/gh/randallmorey/ceevee)
-[![Maintainability](https://api.codeclimate.com/v1/badges/38b19a7dac806663b73f/maintainability)](https://codeclimate.com/github/randallmorey/ceevee/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/38b19a7dac806663b73f/test_coverage)](https://codeclimate.com/github/randallmorey/ceevee/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e23fe3f4b4bfd32e003e/maintainability)](https://codeclimate.com/github/randallmorey/ceevee/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e23fe3f4b4bfd32e003e/test_coverage)](https://codeclimate.com/github/randallmorey/ceevee/test_coverage)
 
 The JSON:API server powering Ceevee.
 
