@@ -1,3 +1,7 @@
-import server from './app/server';
+import DatabaseService from './app/database';
 
-console.log(server());
+const start = async () => {
+  await DatabaseService.connect();
+};
+
+start();

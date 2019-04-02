@@ -2,17 +2,11 @@ version: '3'
 
 services:
 
-  node: &node
-    image: node:11
-    entrypoint: node
-    volumes:
-      - ./:/src
-      - node_modules:/src/node_modules
-    working_dir: /src
-
-  npm: &npm
-    <<: *node
-    entrypoint: npm
+  db:
+    image: mongo:3.4
+    command: mongod
+    ports:
+      - 27017:27017
 
   codeclimate:
     image: codeclimate/codeclimate
@@ -25,9 +19,31 @@ services:
       - CODECLIMATE_CODE=$PWD
       #- CODECLIMATE_DEBUG=1
 
-  test:
+  node: &node
+    image: node:11
+    entrypoint: node
+    volumes:
+      - ./:/src
+      - node_modules:/src/node_modules
+    working_dir: /src
+
+  npm: &npm
+    <<: *node
+    entrypoint: npm
+
+  server: &server
     <<: *npm
+    depends_on:
+      - db
+    command: start
+    environment:
+      MONGODB_URI: mongodb://db/app
+
+  test:
+    <<: *server
     command: test
+    environment:
+      MONGODB_URI: mongodb://db/test
 
 volumes:
   node_modules:

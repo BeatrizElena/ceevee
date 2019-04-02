@@ -27,7 +27,7 @@
     "container:lint:es": "docker-compose run npm run lint:es",
     "container:lint:licenses": "docker-compose run npm run lint:licenses",
     "container:lint:licenses:report": "docker-compose run npm run lint:licenses:report",
-    "container:start": "docker-compose run npm start",
+    "container:start": "docker-compose up server",
     "container:test": "docker-compose run test",
     "container:test:coverage": "docker-compose run test run test:coverage",
     "container:test:server": "docker-compose run test run test:server",
@@ -55,6 +55,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
     "fast-async": "^6.3.8",
+    "mongoose": "^5.4.21",
     "nodemon": "^1.18.10"
   }
 }
