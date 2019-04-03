@@ -14,7 +14,7 @@ export default class DatabaseService {
    */
   static async connect() {
     await mongoose.connect(ENV.MONGODB_URI, { useNewUrlParser: true });
-    Logger.log('Connected to MongoDB.');
+    Logger.log(`Connected to MongoDB on host '${mongoose.connection.host}'.`);
   }
 
   /**
