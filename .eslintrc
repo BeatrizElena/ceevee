@@ -1,11 +1,18 @@
 {
+  "env": {
+    "node": true
+  },
   "root": true,
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
   "extends": "eslint:recommended",
-  "rules": {
-    "no-undef": 1
+  "globals": {
+    "Promise": true,
+    "describe": true,
+    "it": true,
+    "beforeEach": true,
+    "afterEach": true
   }
 }
