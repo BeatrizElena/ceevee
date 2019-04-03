@@ -1,9 +1,10 @@
 import { assert } from 'chai';
-import server from '../../app/server';
+import Application from '../../app/app';
 
+/* eslint no-undef: "warn" */
 describe ('Unit: smoke test', () => {
   it('should execute tests with an imported ES module', () => {
-    server();
+    assert.equal(Application.hello, 'it worked!');
     assert.ok(true, 'Tests should execute and this assertion should pass.');
   });
 

@@ -97,6 +97,15 @@ experimental modules feature:
 npm run container:start
 ```
 
+## Environment Variables
+
+The following environment variables are used by the application.  Default values
+are used when a variable is not set.
+
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `MONGODB_URI` | | URL of the MongoDB instance to which to connect |
+
 ## Contributing
 
 Contributions consistent with the style and quality of existing code are
