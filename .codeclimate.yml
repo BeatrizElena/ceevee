@@ -3,7 +3,7 @@ plugins:
   eslint:
     enabled: true
     config:
-      config: .eslintrc.js
+      config: .eslintrc
   fixme:
     enabled: true
   git-legal:

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import Logger from './helpers/logger';
 import ENV from '../config/environment';
 
 /**
@@ -13,9 +14,9 @@ export default class DatabaseService {
    */
   static async connect() {
     await mongoose.connect(ENV.MONGODB_URI);
-    console.log(`Connected to MongoDB.`);
+    Logger.log('Connected to MongoDB.\n');
     const connection = mongoose.connection;
-    connection.on('error', console.error.bind(console, 'connection error:'));
+    connection.on('error', (err) => Logger.log(`Database error: ${err}\n`));
   }
 
   /**

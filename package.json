@@ -32,7 +32,7 @@
     "container:test:coverage": "docker-compose run test run test:coverage",
     "container:test:server": "docker-compose run test run test:server",
     "lint": "npm run lint:es && npm run lint:licenses",
-    "lint:es": "eslint *.js app/**/*.js test/**/*.js",
+    "lint:es": "eslint *.js config/*.js app/*.js app/**/*.js test/**/*.js",
     "lint:licenses": "node-license-validator --allow-licenses Apache Apache-2.0 \"Apache License\" BSD BSD-2-Clause BSD-3-Clause BSD-like CC-BY-3.0 CC-BY-4.0 CC0-1.0 ISC MIT MIT/X11 \"Public Domain\" Unlicense",
     "lint:licenses:report": "npm run lint:licenses -- -v",
     "start": "nodemon --exec babel-node index.js",

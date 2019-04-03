@@ -1,6 +1,7 @@
 import { assert } from 'chai';
 import Application from '../../app/app';
 
+/* eslint no-undef: "warn" */
 describe ('Unit: smoke test', () => {
   it('should execute tests with an imported ES module', () => {
     assert.equal(Application.hello, 'it worked!');
