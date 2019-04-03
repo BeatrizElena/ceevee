@@ -13,10 +13,8 @@ export default class DatabaseService {
    * Connects mongoose to a MongoDB at `ENV.MONGODB_URI`.
    */
   static async connect() {
-    await mongoose.connect(ENV.MONGODB_URI);
-    Logger.log('Connected to MongoDB.\n');
-    const connection = mongoose.connection;
-    connection.on('error', (err) => Logger.log(`Database error: ${err}\n`));
+    await mongoose.connect(ENV.MONGODB_URI, { useNewUrlParser: true });
+    Logger.log('Connected to MongoDB.');
   }
 
   /**

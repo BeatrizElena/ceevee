@@ -36,7 +36,7 @@
     "lint:licenses": "node-license-validator --allow-licenses Apache Apache-2.0 \"Apache License\" BSD BSD-2-Clause BSD-3-Clause BSD-like CC-BY-3.0 CC-BY-4.0 CC0-1.0 ISC MIT MIT/X11 \"Public Domain\" Unlicense",
     "lint:licenses:report": "npm run lint:licenses -- -v",
     "start": "nodemon --exec babel-node index.js",
-    "test": "NODE_ENV=test mocha --require @babel/register test/unit/**/*.js",
+    "test": "NODE_ENV=test mocha --require @babel/register test/unit/**/*.js test/integration/**/*.js",
     "test:coverage": "nyc npm test",
     "test:server": "nodemon --exec npm test"
   },

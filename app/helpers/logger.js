@@ -5,14 +5,21 @@
  */
 class Logger {
   /**
-   * Log a message to stdout.
+   * Log a message.
    * @param {String} message
    */
   static log(message) {
-    this.write(message);
+    const timestamp = new Date().toISOString();
+    this.write(`[${timestamp}] ${message}`);
+  }
+
+  /**
+   * Writes a message to stdout.
+   * @param {String} message
+   */
+  static write(message) {
+    process.stdout.write(`${message}\n`);
   }
 }
-
-Logger.prototype.write = process.stdout.write;
 
 export default Logger;
