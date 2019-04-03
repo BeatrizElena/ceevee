@@ -27,7 +27,7 @@
     "container:lint:es": "docker-compose run npm run lint:es",
     "container:lint:licenses": "docker-compose run npm run lint:licenses",
     "container:lint:licenses:report": "docker-compose run npm run lint:licenses:report",
-    "container:start": "docker-compose up server",
+    "container:start": "docker-compose run server",
     "container:test": "docker-compose run test",
     "container:test:coverage": "docker-compose run test run test:coverage",
     "container:test:server": "docker-compose run test run test:server",
